@@ -1,0 +1,13 @@
+const express=require("express")
+const cors=require("cors")
+const app=express()
+const productRouter=require("./routes/product.route")
+const postproductR=require("./routes/product.postrout")
+const connectDb = require("./dbconection")
+connectDb("mongodb://127.0.0.1:27017/products").then(()=>{console.log("Db is connected")})
+app.use(cors())
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+app.get("/product", productRouter )
+app.post("/product",postproductR)
+module.exports=app
