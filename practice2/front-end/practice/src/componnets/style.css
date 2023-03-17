@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+
+.heading{
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about{
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem;
+}
