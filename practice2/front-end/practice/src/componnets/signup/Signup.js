@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import axios from "axios"
 import "./signup.css"
+import axios from "axios"
 import { useNavigate } from 'react-router-dom'
 export default function Ragistion() {
 	const navigate =useNavigate()
@@ -22,8 +22,8 @@ export default function Ragistion() {
 
 	const signup=async()=>{
 		await signpost()
-	 alert("Successful")
-	 navigate("/login")
+		alert("Successful")
+		navigate("/login")
 	}
   return (
     <>
@@ -32,26 +32,21 @@ export default function Ragistion() {
 	<div className="screen">
         <h2>Sign Here</h2>
 		<div className="screen__content">
-			<form className="login" onSubmit={signup}>
+			<form className="login" method='POST'>
 				<div className="login__field">
-					<i className="login__icon fas fa-user"></i>
 					<input type="text" className="login__input" name='name' placeholder="Name" required onChange={userchinging} value={user.name}/>
 				</div>
                 <div className="login__field">
-					<i className="login__icon fas fa-user"></i>
 					<input type="text" className="login__input" name='email' placeholder="Email" required onChange={userchinging} value={user.email}/>
 				</div>
                 <div className="login__field">
-					<i className="login__icon fas fa-user"></i>
 					<input type="number" className="login__input" name='mobile' placeholder="Mobile" required  onChange={userchinging} value={user.mobile}/>
 				</div>
 				<div className="login__field">
-					<i className="login__icon fas fa-lock"></i>
 					<input type="password" className="login__input" name='password' placeholder="Password" required onChange={userchinging} value={user.password}/>
 				</div>		
-				<button className="button login__submit" type='submit'>
+				<button className="button login__submit" onClick={signup}>
 					<span className="button__text" >Sign Now</span>
-					<i className="button__icon fas fa-chevron-right"></i>
 			</button>		
 			</form>
 		</div>	

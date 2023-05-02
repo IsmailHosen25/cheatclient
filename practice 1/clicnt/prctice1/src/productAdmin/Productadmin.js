@@ -1,7 +1,7 @@
 import React ,{useState} from 'react'
 import {useNavigate} from "react-router-dom"
 import "./productadmin.css"
-
+// import axios from "axios"
 
 
 export default function Productadmin() {
@@ -33,11 +33,21 @@ const postData=async(e)=>{
   alert("product does not added")
  }
  else{
+
   alert("product added")
+  Navigate("/")
  }
 }
+// const postData= async ()=>{
+//   try{
+//     await axios.post("http://localhost:4001/product",padd)
+//   }catch(error){
+//     console.log(error)
+//   }
+    
+// }
 const show =()=>{
-  Navigate("/")
+
 }
   return (
     <>   <form method='POST'>
