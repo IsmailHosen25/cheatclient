@@ -7,13 +7,22 @@
     align-items: center;
     padding: 1rem;
 }
-.tablehead{
+.table .tablehead{
     border-collapse: collapse;
     width: 50%;
 }
-th{
+.table .tablehead th{
     border: 1px solid black;
     padding: 1rem 1.5rem ;
+}
+.table .tablehead th .link{
+    border: 2px solid black;
+    text-decoration: none;
+    padding: 0.2rem 0.2rem;
+    color: #000;
+}
+.table .tablehead th .link:hover{
+    color: blueviolet;
 }
 .btn{
     margin-top: 1rem;

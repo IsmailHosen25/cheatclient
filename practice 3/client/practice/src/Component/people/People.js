@@ -1,11 +1,11 @@
 import React, { useEffect , useState} from 'react'
-import {useNavigate} from "react-router-dom"
+import {useNavigate,Link} from "react-router-dom"
 import "./people.css";
 export default function People() {
   const navigate =useNavigate()
 
    const [user, setuser]=useState([])
-   const url="http://localhost:3005/";
+   const url="http://localhost:3010/user/all";
    const fatchapi = async (url)=>{
        try{
             const res= await fetch(url)
@@ -24,23 +24,28 @@ export default function People() {
           <thead>
             <tr>
                 <th>Name</th>
-                <th>Age</th>
+                <th>Email</th>
+                <th>Number</th>
+                <th>opperssion</th>
             </tr>
           </thead>
           <tbody>
-           {user.map((item)=>{
+           {user.map((item,index)=>{
+            const {name,email,number}=item
             return(
-                <tr>
-                 <th>{item.name}</th>
-                 <th>{item.age}</th>
+                <tr key={index+1}>
+                 <th>{name}</th>
+                 <th>{email}</th>
+                 <th>0{number}</th>
+                 <th><Link to={name} state={{name,email,number}} className='link'>More info</Link></th>
                 </tr>
             )
             })}
             </tbody>
         </table>
         <button onClick={()=>{
-   navigate("/")
-        }} className='btn'>Home</button>
+   navigate("/signup")
+        }} className='btn'>Add user</button>
     </div>
   )
 }
