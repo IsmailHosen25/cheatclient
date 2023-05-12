@@ -1,23 +1,35 @@
 import React, { useEffect , useState} from 'react'
 import {useNavigate,Link} from "react-router-dom"
+import axios from 'axios';
 import "./people.css";
 export default function People() {
   const navigate =useNavigate()
 
    const [user, setuser]=useState([])
-   const url="http://localhost:3010/user/all";
-   const fatchapi = async (url)=>{
-       try{
-            const res= await fetch(url)
-            const data = await res.json()
-            setuser(data)
+   const fatchapi = async ()=>{
+       try{ 
+           const url="http://localhost:3010/user/all";
+           const res = await axios.get(url)
+           setuser(res.data)
        }catch(error){
         console.error(error)
        }
    }
     useEffect( ()=>{
-         fatchapi(url)
+       fatchapi()
     },[])
+
+    const deleatuser = async (email)=>{
+           try{
+            alert("are you sure you want to deleat?")
+            const url=`http://localhost:3010/user/all/${email}`;
+            await axios.delete(url)
+            fatchapi()
+           }
+           catch(e){
+            console.log(e)
+           }
+    }
   return (
     <div className='table'>
         <table className='tablehead'>
@@ -26,7 +38,9 @@ export default function People() {
                 <th>Name</th>
                 <th>Email</th>
                 <th>Number</th>
-                <th>opperssion</th>
+                <th>Update</th>
+                <th>Deleat</th>
+               
             </tr>
           </thead>
           <tbody>
@@ -37,7 +51,9 @@ export default function People() {
                  <th>{name}</th>
                  <th>{email}</th>
                  <th>0{number}</th>
-                 <th><Link to={name} state={{name,email,number}} className='link'>More info</Link></th>
+                 <th><Link to={name} state={{name,email,number}} className='link'>Update</Link></th>
+                 <th><button onClick={async ()=>await deleatuser(email)} className='btn'>Deleat</button></th>
+                 {/* <th><Link to={name} ></Link></th> */}
                 </tr>
             )
             })}

@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import {useNavigate} from "react-router-dom"
+import axios from "axios"
 export default function Login() {
     const navigate=useNavigate()
-    const url="http://localhost:3010/user/all";
-    const [userinfo, setuserinfo]=useState([])
-
-
+    const url="http://localhost:3010/user/all/login";
     const [login ,setLogin]=useState({
         email:"",password:""
     })
@@ -14,44 +12,17 @@ export default function Login() {
     }
     const postData=async (e)=>{
         e.preventDefault()
+       const {email,password}=login
         try{ 
-            const {email,password}=login
-            const findemail= await userinfo.filter((item)=>{ return item.email === email})
-           if(findemail.length===0){
-            alert("Sign Up first")
-            navigate("/signup")
-           }
-           else{
-            const varifypassword = await findemail.filter((item)=>{return item.password === password})
-            if(varifypassword.length===0){
-                alert("password did not match")
-            }
-            else{
-                alert("Welcome again")
-                navigate("/people")
-            }
-
-           }
-                
-           
+           await axios.post(url,{
+                email, password
+            })
+           navigate("/userlist")
         }
         catch(error){
            console.log(error)
         }
     }
-    const fatchapi=async(url)=>{
-            try{
-             const res= await fetch(url)
-             const data=await res.json()
-             setuserinfo(data)
-
-            }catch(error){
-              console.log(error)
-            }
-    } 
-    useEffect(()=>{
-        fatchapi(url)
-    },[])
   return (
     <div className='form'>
         <form onSubmit={postData}>

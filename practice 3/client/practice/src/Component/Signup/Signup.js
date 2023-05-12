@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {useNavigate} from "react-router-dom"
+import axios from 'axios'
 import './signup.css'
 export default function Signup() {
     const navigate=useNavigate()
@@ -10,18 +11,14 @@ export default function Signup() {
          setUser({...user, [e.target.name]:e.target.value})
     }
     const postData= async (e)=>{
+        e.preventDefault()
         const {name,email,number,password}=user
-        fetch("http://localhost:3010/user/all",{
-            method:"POST",
-            headers:{
-                "content-type":"application/json"
-            },
-            body:JSON.stringify({
-                name,email,number,password
-            })
+         await axios.post("http://localhost:3010/user/all",{
+            name,email,number,password
         })
-        navigate("/people")
+        navigate("/userlist")
     }
+    console.log(user)
   return (
     <div className='form' >
         <form onSubmit={postData}>
