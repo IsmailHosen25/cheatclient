@@ -1,0 +1,269 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html{
+  font-size: 10px;
+}
+
+/* ******************** Nav style start*********************** */
+.nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background-color: #000;
+}
+.nav .link{
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+}
+.nav .link:hover{
+  color: cornflowerblue;
+}
+.nav .active{
+  color:cornflowerblue
+}
+/* ******************** Nav style end*********************** */
+
+
+/* ******************** Error style start*********************** */
+.error{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error h1{
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+/* ******************** Error style end*********************** */
+
+/* ******************** Home style start*********************** */
+.home{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home h1{
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+/* ******************** Home style end*********************** */
+
+
+
+/* ******************** Selfuser style start*********************** */
+.selfuser{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selfuser h1{
+  font-size: 2rem;
+  text-align: center;
+  text-transform:capitalize;
+  line-height: 3rem;
+}
+
+
+/* ******************** selfuser style end*********************** */
+
+
+
+/* ******************** contect us style start*********************** */
+
+.contect{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contect h1{
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+/* ******************** contect us style end*********************** */
+
+
+/* ******************** About us style start*********************** */
+
+.about{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about h1{
+  font-size: 2rem;
+  text-decoration: none;
+}
+.about h1 span{
+  font-size: 1.5rem;
+}
+
+
+/* ******************** About us style end*********************** */
+
+
+
+/* ******************** Sign Up style start*********************** */
+
+.signupform{
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signupform form {
+  width: 30%;
+  padding: 2rem 3rem;
+  border:  2px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+.signupform form h1{
+  color:crimson;
+  width: 100%;
+  border-bottom:2px solid crimson;
+}
+.signupform form div{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.signupform form div input{
+  width: 70%;
+  height: 2.5rem;
+}
+.signupform form .subbtn{
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+/* ******************** Sign Up style end*********************** */
+
+
+/* ******************** login style start*********************** */
+
+.loginform{
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginform form {
+  width: 30%;
+  padding: 2rem 3rem;
+  border:  2px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+.loginform form div{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.loginform form div input{
+  width: 70%;
+  height: 2.5rem;
+}
+.loginform form .subbtn{
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+.loginform form h1{
+  color: darkslateblue;
+  width: 100%;
+  border-bottom:2px solid darkslateblue;
+}
+
+/* ******************** login style end*********************** */
+
+
+
+/* ******************** Find style start*********************** */
+
+.findform{
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.findform form {
+  width: 30%;
+  padding: 2rem 3rem;
+  border:  2px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+.findform form div{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.findform form div input{
+  width: 70%;
+  height: 2.5rem;
+}
+.findform form .subbtn{
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+.findform form h1{
+  color: darkslateblue;
+  width: 100%;
+  border-bottom:2px solid darkslateblue;
+}
+
+/* ******************** Fond style end*********************** */
