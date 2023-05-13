@@ -43,7 +43,7 @@ export default function SignUp() {
       }
       else{
         alert("Thank you for Sign Up")
-        navigate(`/user/${user.name}`)
+        navigate(`/${email}`)
       }  
     }
 
@@ -58,43 +58,43 @@ export default function SignUp() {
           <label>
             Enter Your Name: 
           </label>
-          <input type='text' name='name' id='name' value={user.name} autoComplete='off' required onChange={takingvalue}/>
+          <input type='text' name='name' id='name' autoComplete='off' required onChange={takingvalue}/>
         </div>
         <div>
           <label>
             Enter Your Email: 
           </label>
-          <input type='email' name='email' id='email' value={user.email} autoComplete='off' required onChange={takingvalue}/>
+          <input type='email' name='email' id='email'  autoComplete='off' required onChange={takingvalue}/>
         </div>
         <div>
           <label>
             Enter Your Number: 
           </label>
-          <input type='number' name='number' id='number' value={user.number} autoComplete='off' required onChange={takingvalue}/>
+          <input type='number' name='number' id='number'  autoComplete='off' required onChange={takingvalue}/>
         </div>
         <div>
           <label>
             Enter Your Password: 
           </label>
-          <input type='password' name='password' id='password' value={user.password} autoComplete='off' required onChange={takingvalue}/>
+          <input type='password' name='password' id='password' autoComplete='off' required onChange={takingvalue}/>
         </div>
         <div>
           <label>
            Enter your distrcit: 
           </label>
-          <input type='text' name='distrcit' id='distrcit'value={user.distrcit} autoComplete='off' required onChange={takingvalue}/>
+          <input type='text' name='distrcit' id='distrcit' autoComplete='off' required onChange={takingvalue}/>
         </div>
         <div>
           <label>
             Enter Your Uppazila: 
           </label>
-          <input type='text' name='uppazila' id='uppazila'value={user.uppazila} autoComplete='off' required onChange={takingvalue}/>
+          <input type='text' name='uppazila' id='uppazila' autoComplete='off' required onChange={takingvalue}/>
         </div>
         <div>
           <label>
             Enter Your Village: 
           </label>
-          <input type='text' name='village' id='village' value={user.village} autoComplete='off'  onChange={takingvalue}/>
+          <input type='text' name='village' id='village'  autoComplete='off'  onChange={takingvalue}/>
         </div>
         <button className='subbtn'>Submit</button>
       </form>

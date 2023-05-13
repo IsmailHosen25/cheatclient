@@ -18,7 +18,7 @@ const submituser=(e)=>{
     e.preventDefault()
     console.log(user)
     alert("Welcome Back")
-    navigate(`/user/${user.email}`)
+    navigate(`/${user.email}`)
 }
 
 

@@ -20,7 +20,7 @@ const userpost= async(req,res)=>{
             email:email,
             number:number,
             password:password,
-            distract:distrcit,
+            distrcit:distrcit,
             uppazila:uppazila,
             village:village})
           const user= await data.save()

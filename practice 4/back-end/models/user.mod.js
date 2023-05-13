@@ -16,7 +16,7 @@ const userpost= new mongoose.Schema({
         type:String,
         required:true
     },
-    distract:{
+    distrcit:{
         type:String,
         required:true
     },

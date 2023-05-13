@@ -9,6 +9,7 @@ import Contect from './component/Contect';
 import Error from './component/Error'
 import Selfuser from './component/Selfuser'
 import About from './component/About';
+import Udtyoursels from "./component/Updateuser"
 function App() {
   return (
   <>
@@ -20,7 +21,8 @@ function App() {
     <Route path='/signup' element={<SignUp/>} />
     <Route path='/login' element={<Login/>} />
     <Route path='/find' element={<Find/>} />
-    <Route path='/user/:name' element={<Selfuser/>}/>
+    <Route path='/:email' element={<Selfuser/>}/>
+    <Route path='/:email/:name' element={<Udtyoursels/>}/>
     <Route path='*' element={<Error/>} />
    </Routes>
   </>
