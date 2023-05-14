@@ -1,4 +1,4 @@
-const usermodel= require("../models/user.mod")
+const usermodel= require("../../models/user.mod")
 const userupdate= async(req,res)=>{
 
    try{
@@ -26,7 +26,7 @@ const userupdate= async(req,res)=>{
             res.status(200).send(updateuser)
         }
         else{
-            res.status(200).send({
+            res.status(202).send({
               message:"did not updated"
             })
         }
@@ -34,7 +34,7 @@ const userupdate= async(req,res)=>{
    }
 
    catch(e){
-    res.status(505).send(e)
+    res.status(404).send(e)
    }
 
 }

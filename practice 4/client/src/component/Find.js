@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-
+import {useNavigate}from "react-router-dom"
 export default function Find() {
-
+ const navigate =useNavigate()
 
   const [find , setfind]=useState({
     name:'',
@@ -15,8 +15,8 @@ const takingvalue =(e)=>{
 }
 const findone=(e)=>{
     e.preventDefault()
+    navigate(`${find.name}?distrcit=${find.distrcit}&uppazila=${find.uppazila}&village=${find.village}`)
 }
-console.log(find)
   return (
     <div className='findform'>
      

@@ -1,4 +1,4 @@
-const usermodel = require("../models/user.mod")
+const usermodel = require("../../models/user.mod")
 const userget=async (req,res)=>{
 try{
   const alluser= await usermodel.find().sort({
@@ -7,11 +7,11 @@ try{
   if(alluser){
     res.status(200).send(alluser)
   }else{
-    res.status(404).send("User NOt found")
+    res.status(202).send("User NOt found")
   }
 
 }catch(e){
-   res.status(500).send(e)
+   res.status(404).send(e)
 }
 }
 module.exports=userget

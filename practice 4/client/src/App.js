@@ -10,6 +10,7 @@ import Error from './component/Error'
 import Selfuser from './component/Selfuser'
 import About from './component/About';
 import Udtyoursels from "./component/Updateuser"
+import Worker from './component/Worker';
 function App() {
   return (
   <>
@@ -20,9 +21,13 @@ function App() {
     <Route path='/about' element={<About/>} />
     <Route path='/signup' element={<SignUp/>} />
     <Route path='/login' element={<Login/>} />
-    <Route path='/find' element={<Find/>} />
-    <Route path='/:email' element={<Selfuser/>}/>
-    <Route path='/:email/:name' element={<Udtyoursels/>}/>
+
+    <Route path='/login/:email' element={<Selfuser/>}/>
+    <Route path='/login/:email/:name' element={<Udtyoursels/>}/>
+
+
+    <Route path='/worker' element={<Find/>} />
+    <Route path='/worker/:name' element={<Worker/>}/>
     <Route path='*' element={<Error/>} />
    </Routes>
   </>

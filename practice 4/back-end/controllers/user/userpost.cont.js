@@ -1,4 +1,4 @@
-const usermodel=require("../models/user.mod")
+const usermodel=require("../../models/user.mod")
 
 const userpost= async(req,res)=>{
 
@@ -28,12 +28,12 @@ const userpost= async(req,res)=>{
             res.status(200).send(user)
           }
           else(
-            res.status(404).send("Pleas try again")
+            res.status(202).send("Pleas try again")
           )
         }
      }
      catch(e){
-        res.status(500).send(e)
+        res.status(404).send(e)
      }
 }
 

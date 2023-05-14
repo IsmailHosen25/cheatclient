@@ -43,7 +43,7 @@ export default function SignUp() {
       }
       else{
         alert("Thank you for Sign Up")
-        navigate(`/${email}`)
+        navigate(`/login/${email}`)
       }  
     }
 

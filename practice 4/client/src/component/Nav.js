@@ -9,7 +9,7 @@ export default function Nav() {
        <NavLink to="/about" className="link">About Us</NavLink>
        <NavLink to="/signup" className="link">Sign Up</NavLink>
        <NavLink to="/login" className="link">Login</NavLink>
-       <NavLink to="/find" className="link">Find</NavLink>
+       <NavLink to="/worker" className="link">Worker</NavLink>
        </nav>
   )
 }

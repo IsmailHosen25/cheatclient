@@ -39,7 +39,7 @@ const submituser =async (e)=>{
  }
  else{
    alert("Updated")
-   navigate(`/${location.state.user.email}`)
+   navigate(`/login/${location.state.user.email}`)
  }  
 
 }

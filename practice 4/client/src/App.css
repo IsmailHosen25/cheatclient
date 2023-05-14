@@ -80,14 +80,41 @@ html{
   text-transform:capitalize;
   line-height: 3rem;
 }
-.selfuser .link{
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
-  width: 100%;
-  border: 2px solid black;
+.selfuser .selfoparation{
+  width: 20%;
+  padding: 2rem 0rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-
-
+.selfuser .selfoparation .link{
+  padding: 0.3rem 1rem;
+  font-size: 1.5rem;
+  border: 2px solid black;
+  color: black;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color:transparent;
+}
+.selfuser .selfoparation .link:hover{
+  background-color: black;
+  color: #fff;
+  transition: 0.3s linear;
+}
+.selfuser .selfoparation .btn{
+  padding: 0.3rem 1rem;
+  font-size: 1.5rem;
+  border: 2px solid black;
+  color: black;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color:transparent;
+}
+.selfuser .selfoparation .btn:hover{
+  background-color: black;
+  color: #fff;
+  transition: 0.3s linear;
+}
 /* ******************** selfuser style end*********************** */
 
 
@@ -273,4 +300,34 @@ html{
   border-bottom:2px solid darkslateblue;
 }
 
-/* ******************** Fond style end*********************** */
+/* ******************** Find style end*********************** */
+
+/* ******************** Worker style Start*********************** */
+.workermain{
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.workermain .table{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.workermain .table h1{
+  font-size: 3rem;
+  text-transform:capitalize ;
+}
+.workermain .table table{
+  border-collapse: collapse;
+}
+.workermain .table table th{
+     border: 2px solid black;
+     font-size: 1.8rem;
+     padding: 0.5rem 1rem;
+}
+
+/* ******************** Worker style end*********************** */

@@ -1,4 +1,4 @@
-const usermodel = require("../models/user.mod")
+const usermodel = require("../../models/user.mod")
 const userselfget =async(req,res)=>{
     try{
         
@@ -7,12 +7,12 @@ const userselfget =async(req,res)=>{
     if(user){
         res.status(200).send(user)
     }else{
-        res.status(404).send("There is somthig wrong")
+        res.status(202).send("There is somthig wrong")
     }
 
 
     }catch(e){
-        res.status(505).send(e)
+        res.status(404).send(e)
     }
 }
 module.exports=userselfget
