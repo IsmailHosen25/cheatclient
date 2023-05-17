@@ -4,35 +4,42 @@ import Nav from './component/Nav';
 import {Routes, Route} from "react-router-dom"
 import SignUp from './component/SignUp';
 import Login from './component/Login';
-import Find from './component/Find';
 import Contect from './component/Contect';
 import Error from './component/Error'
-import Selfuser from './component/Selfuser'
 import About from './component/About';
-import Udtyoursels from "./component/Updateuser"
-import Worker from './component/Worker';
-import PrivateOutlet from './Auth and Private/Private';
+import Profile from './component/Profile';
+import { createContext, useReducer } from 'react';
+import {reducer,initialState} from "./Auth and Private/useReducer"
+import PrivateOutlet from './Auth and Private/PrivateRoute';
+export  const userContext=createContext()
+
 function App() {
+ 
+const [state, dispatch]=useReducer(reducer, initialState)
   return (
   <>
-   <Nav/>
+  <userContext.Provider value={{state, dispatch}}>
+
+  <Nav/>
    <Routes>
-    <Route path='/' element={<Home/>} />
-    <Route path='/contect' element={<Contect/>} />
-    <Route path='/about' element={<About/>} />
+
+    <Route path='/' element={<Home/>}/>
     <Route path='/signup' element={<SignUp/>} />
     <Route path='/login' element={<Login/>} />
     <Route path='/*' element={<PrivateOutlet/>}>
 
-    <Route path='login/:email' element={<Selfuser/>}/>
-    <Route path='login/:email/:name' element={<Udtyoursels/>}/>
 
-    <Route path='worker' element={<Find/>} />
-    <Route path='worker/:name' element={<Worker/>}/>
+        <Route path='profile' element={<Profile/>} />
+        <Route path='contect' element={<Contect/>} />
+       <Route path='about' element={<About/>} />
 
     </Route>
+
     <Route path='*' element={<Error/>} />
    </Routes>
+
+  </userContext.Provider>
+
   </>
   );
 }
