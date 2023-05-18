@@ -2,6 +2,7 @@ const usermodel=require("../models/user.mod")
 const bcrypt=require("bcrypt")
 const register=async(req,res)=>{
 try{
+    
     const username=req.body.username
     const email=req.body.email
     const checkuser= await usermodel.findOne({email:email})

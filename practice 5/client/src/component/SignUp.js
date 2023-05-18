@@ -16,6 +16,7 @@ export default function SignUp() {
       password:""
 
     })
+   
 
     const takingvalue=(e)=>{
         setuser({...user,[e.target.name]:e.target.value})
@@ -23,12 +24,9 @@ export default function SignUp() {
     const submituser = async(e)=>{
         e.preventDefault ()
   
-          const{name,email,password}=user
-         const res =  await axios.post("http://localhost:3003/user/register" ,{
-            name,
-            email,
-            password
-        })
+          const{username,email,password}=user
+         const res = await axios.post("http://localhost:3003/user/register", {username,email,password}
+        )
       if(res.data.message==="valid User"){
         alert("You are alrady vaild user")
         navigate("/login")
@@ -39,16 +37,14 @@ export default function SignUp() {
       }  
     }
 
-
-
   return (
     <div className='signupform'>
 
-      <form onSubmit={submituser}>
+      <form onSubmit={submituser} encType='multipart/form-data'>
         <h1>Sign Up</h1>
         <div>
           <label>
-            Enter Your userName: 
+            Enter Your Name: 
           </label>
           <input type='text' name='username' id='name' autoComplete='off' required onChange={takingvalue}/>
         </div>
@@ -65,7 +61,7 @@ export default function SignUp() {
           <input type='password' name='password' id='password' autoComplete='off' required onChange={takingvalue}/>
         </div>
         <button className='subbtn'>Submit</button>
-        <div>Thank you {user.username}</div>
+        <div className='thankdiv'>Thank you {user.username}</div>
       </form>
      
 

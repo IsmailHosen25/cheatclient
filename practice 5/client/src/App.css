@@ -209,7 +209,9 @@ html{
   font-size: 1.8rem;
   width: 100%;
 }
-
+.signupform form .thankdiv{
+  text-transform:capitalize;
+}
 /* ******************** Sign Up style end*********************** */
 
 
@@ -338,3 +340,48 @@ html{
 }
 
 /* ******************** Worker style end*********************** */
+
+
+.profile{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile .profile-in{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.profile .profile-in .img {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  border: 2px solid black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.profile .profile-in .img img{
+   width: 100%;
+   height: 100%;
+   position: relative;
+   z-index: 2;
+}
+.profile .profile-in input{
+  display: none;
+}
+.profile .profile-in .logoutbtn{
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 3px;
+}

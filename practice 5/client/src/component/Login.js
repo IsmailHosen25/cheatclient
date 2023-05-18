@@ -34,8 +34,8 @@ const submituser=async (e)=>{
      else{
       alert("Wellcome Back")
       window.localStorage.setItem("token", res.data.token)
-      window.localStorage.setItem('login',"true")
-      dispatch({type:"login", payload:true})
+      const login=  window.localStorage.setItem('login',"true")
+      dispatch({type:"login", payload:login})
       navigate("/profile")
      }
   }catch(e){
