@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+
+
+
+/* **************************Nav start***************************** */
+
+.nav{
+    padding: 0.8rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #3498db;
+}
+.nav .nav-in{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .nav-in ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .nav-in ul li .link{
+    font-size: 2.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+.nav .nav-in ul li .link:hover{
+    color: #2c3e50;
+    transition: 0.2s linear;
+}
+.nav .nav-in .manu-bar{
+      display: none;
+}
+.nav .nav-in .manu-bar:hover{
+    color: #2c3e50;
+    transition: 0.2s linear;
+}
+/* ***************************Nav End****************************** */
+
+
+/* ***************************Ragistration start****************************** */
+
+
+
+/* ***************************Ragistration End****************************** */
+
+
+
+/* ***************************Media Query start****************************** */
+
+@media (max-width:480px) {
+    
+}
+@media (max-width:768px) {
+    
+}
+@media (max-width:1024px) {
+    .nav .nav-in ul li .link{
+        display: none;
+    }
+    .nav .nav-in .manu-bar{
+        display:inline;
+        font-size: 2.5rem;
+        color: #fff;
+        text-decoration: none;
+  }
+}
+
+
+/* ***************************Media Query end****************************** */
