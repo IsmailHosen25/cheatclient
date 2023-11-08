@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import massenger_img from "../assets/Messenger-Logo.png"
+import MessangerBox from "../Components/MessengerBox"
 export default function Profile() {
+  const [messagebox,setmessagebox]=useState(false)
   return (
   <>
   <div className="vh-100" style={{backgroundColor:"#f4f5f7"}}>
@@ -58,8 +60,10 @@ export default function Profile() {
 </div>
 </div>
 </div>
+{messagebox?<MessangerBox/>:null}
+
 <div className='massenge_img' onClick={()=>{
-   alert("hello")
+  setmessagebox(!messagebox)
 }}>
   <img src={massenger_img}/>
 </div>
