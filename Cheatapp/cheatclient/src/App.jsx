@@ -1,7 +1,11 @@
 import './App.css'
+import {Routes,Route} from "react-router-dom"
 import Login from './Components/Login'
 import Sign from './Components/Sign'
-import {Routes,Route} from "react-router-dom"
+import ProtectedRoute from './ProtectedRoute'
+import Profile from "./Components/Profile"
+import ErrorPage from "./Components/ErrorPage"
+
 function App() {
  
 
@@ -10,6 +14,8 @@ function App() {
      <Routes>
        <Route path='/login' element={<Login/>} />
        <Route path='/sign' element={<Sign/>}/>
+       <Route path="/profile/:id" element={<ProtectedRoute Components={Profile}/>}/>
+       <Route path='*' element={<ErrorPage/>}/>
      </Routes>
     </>
   )
